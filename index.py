@@ -41,7 +41,7 @@ ALOOMA_DEPLOYMENT = os.environ['ALOOMA_DEPLOYMENT']
 ALOOMA_USER = os.environ['ALOOMA_USER']
 ALOOMA_PASSWORD = os.environ['ALOOMA_PASSWORD']
 
-ALOOMA_API = alooma.Alooma(ALOOMA_DEPLOYMENT, ALOOMA_USER, ALOOMA_PASSWORD)
+ALOOMA_API = alooma.Client(username=ALOOMA_USER, password=ALOOMA_PASSWORD, account_name=ALOOMA_DEPLOYMENT)
 
 def upload_alooma_code_engine(file_path):
     """ Uploads Code Engine Script to Alooma """
